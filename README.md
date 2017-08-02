@@ -1,4 +1,4 @@
-# **status**
+tatus**
 git status 需要经常用到的查看文件状态的命令
 
 # **rm**
@@ -90,6 +90,12 @@ git tag -a xxx -m xxx 创建一个带有附注的标签
 
 git tag -d xxx 删除标签  
 
+git push origin --tags 推送本地所有未推送过的标签
+
+git push origin :refs/tags/vxx 删除远程的一个标签
+
+git push origin --delete tag vxx 同上
+
 
 # **blame**
 git blame xxx 查看文件的上一次提交的作者和修订  
@@ -136,7 +142,8 @@ git add xxx
 3. 将解决完后的冲突文件标识为已经解决冲突
 
 # **pull**
-将远程仓库代码拉取到本地并merge。相当于git fetch , git merge (origin/master)
+将远程仓库代码拉取到本地并merge。相当于git fetch , git merge (remotes/origin/master)
+完整命令为： git pull origin xxx:yyy  xxx为远程分支，yyy为本地分支
 
 # **fetch**
 将最新远程代码拉取到本地origin/master，这个操作一定会成功
